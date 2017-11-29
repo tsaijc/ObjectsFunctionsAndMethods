@@ -14,9 +14,19 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    two_circles()
+    circle_and_rectangle()
 
 def two_circles():
+    """
+    -- Constructs an rg.RoseWindow.
+    -- Constructs and draws two rg.Circle objects on the window
+         such that:
+           -- They fit in the window and are easily visible.
+           -- They have different radii.
+           -- One is filled with some color and one is not filled.
+    -- Waits for the user to press the mouse, then closes the window.
+    """
+
     window = rg.RoseWindow(300,300)
 
     cp1 = rg.Point(100,100)
@@ -32,15 +42,7 @@ def two_circles():
 
     window.render()
     window.close_on_mouse_click()
-    """
-    -- Constructs an rg.RoseWindow.
-    -- Constructs and draws two rg.Circle objects on the window
-         such that:
-           -- They fit in the window and are easily visible.
-           -- They have different radii.
-           -- One is filled with some color and one is not filled.
-    -- Waits for the user to press the mouse, then closes the window.
-    """
+
     # ------------------------------------------------------------------
     # DONE: 2. Implement this function, per its doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
@@ -81,6 +83,43 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+
+    window = rg.RoseWindow(500,500)
+
+    cp1 = rg.Point(400,400)
+    circle1 = rg.Circle(cp1, 30)
+    circle1.fill_color = 'blue'
+    circle1.attach_to(window)
+
+    p1 = rg.Point(50,50)
+    p2 = rg.Point(200,200)
+    rect = rg.Rectangle(p1,p2)
+    rect.attach_to(window)
+
+    window.render()
+
+    cthickness = circle1.outline_thickness
+    ccolor = circle1.fill_color
+    ccenter = circle1.center
+    cxcoor = ccenter.x
+    cycoor = ccenter.y
+    print(cthickness)
+    print(ccolor)
+    print(ccenter)
+    print(cxcoor)
+    print(cycoor)
+
+    rthickness = rect.outline_thickness
+    rcolor = rect.fill_color
+    rcenter =
+    rxcoor =
+    rycoor =
+    print(rthickness)
+    print(rcolor)
+
+
+    window.close_on_mouse_click()
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.

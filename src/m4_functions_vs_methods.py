@@ -164,13 +164,7 @@ def turtle3():
 
 
 def try_methods():
-    three = rg.SimpleTurtle()
-    three.pen = rg.Pen('brown', 5)
 
-    three.forward(150)
-    three.left(90)
-    three.forward(50)
-    three.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -180,6 +174,14 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    three = rg.SimpleTurtle()
+    three.pen = rg.Pen('brown', 5)
+
+    three.forward(150)
+    three.left(90)
+    three.forward(50)
+    three.backward(100)
+
     ####################################################################
     # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
@@ -188,16 +190,16 @@ def try_methods():
 
 
 def try_functions():
-    jump_and_move_turtle(200,100,300,30)
-    jump_and_move_turtle(100,200,0,0)
-    jump_and_move_turtle(-50,50,100,100)
-
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
+
     ####################################################################
     # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
@@ -213,26 +215,6 @@ def try_functions():
 
 
 def try_methods_and_functions():
-    five = rg.SimpleTurtle()
-    five.pen = rg.Pen('blue', 5)
-
-    five.backward(150)
-    five.speed = 1
-    draw_many_squares(five, 2, 100, 30)
-
-    five.speed = 5
-    five.pen.color = 'red'
-    draw_many_squares(five,10,50,15)
-
-    five.speed = 100
-    five.pen.size = 35
-    draw_many_squares(five, 8, 300, 60)
-
-    five.pen = rg.Pen('black', 3)
-    five.backward(200)
-    five.draw_circle(30)
-    five.draw_square(50)
-
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
@@ -264,6 +246,27 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    five = rg.SimpleTurtle()
+    five.pen = rg.Pen('blue', 5)
+
+    five.backward(150)
+    five.speed = 1
+    draw_many_squares(five, 2, 100, 30)
+
+    five.speed = 5
+    five.pen.color = 'red'
+    draw_many_squares(five,10,50,15)
+
+    five.speed = 100
+    five.pen.size = 35
+    draw_many_squares(five, 8, 300, 60)
+
+    five.pen = rg.Pen('black', 3)
+    five.backward(200)
+    five.draw_circle(30)
+    five.draw_square(50)
+
+
     ####################################################################
     # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
