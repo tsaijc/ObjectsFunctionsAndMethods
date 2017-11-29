@@ -180,7 +180,7 @@ def lines():
     window.close_on_mouse_click()
 
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
